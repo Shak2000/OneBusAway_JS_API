@@ -1,7 +1,6 @@
 import React, { Component } from "react";
-import { RouteFinder, RoutesForLocationResp } from "./routeFinder";
+import { RoutesForLocationResp, routesForLocation } from "./routeFinder";
 import { Route } from "./route";
-import { API_KEY } from "./config";
 
 type RouteProps = {
 
@@ -79,8 +78,7 @@ export class RouteDisplay extends Component<RouteProps, RouteState> implements R
             && Number(this.state.latitude) >= -90 && Number(this.state.latitude) <= 90 && Number(this.state.longitude) >= -180
             && Number(this.state.longitude) <= 180) {
             this.setState({errorMessage: ""});
-            const routeFinder = new RouteFinder(API_KEY, "https://api.pugetsound.onebusaway.org");
-            routeFinder.routesForLocation(this.state.latitude, this.state.longitude, this);
+            routesForLocation(this.state.latitude, this.state.longitude, this);
         } else {
             this.setState({errorMessage: "Error: The latitude must be a number from -90 to 90, and the longitude must be a number from -180 to 180."});
         }

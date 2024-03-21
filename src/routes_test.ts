@@ -1,7 +1,6 @@
 import * as assert from "assert";
 import { Route, toRoute } from "./route";
-import { RouteFinder, RoutesForLocationResp } from "./routeFinder";
-import { API_KEY } from "./config";
+import { RoutesForLocationResp, routesForLocation } from "./routeFinder";
 
 class RouteResponseFinder implements RoutesForLocationResp {
     foundRoutes(routes: Route[]): void {
@@ -17,11 +16,10 @@ class RouteResponseFinder implements RoutesForLocationResp {
 }
 
 describe("route_finder_test", function() {
-    const routes: RouteFinder = new RouteFinder(API_KEY, "https://api.pugetsound.onebusaway.org");
     const routeResponseFinder = new RouteResponseFinder();
 
     it("routes_for_location", function() {
-        routes.routesForLocation("47.653435", "-122.305641", routeResponseFinder);
+        routesForLocation("47.653435", "-122.305641", routeResponseFinder);
     });
 });
 

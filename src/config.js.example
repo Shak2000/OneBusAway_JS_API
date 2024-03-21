@@ -1,0 +1,2 @@
+export const API_KEY = "TEST";
+export const SERVER = "https://api.pugetsound.onebusaway.org/api/where/routes-for-location.json";

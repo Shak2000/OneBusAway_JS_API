@@ -7,12 +7,11 @@ The source code can be found in the "/src" folder:
 - "routeDisplay.tsx" is a sample application that allows users to try out the API.
 
 In order to use the API:
-1) Add a simple file named config.js with two lines:
+1) Add a simple file named config.js with two lines to the "src" folder (or simply rename "config.js.example" as "config.js"):
 - export const API_KEY = "<YOUR API_KEY>";
 - export const SERVER = "<YOUR SERVER>";
 - You can use "TEST" as an API key, but it meet its use limit quickly.
 - You can use "https://api.pugetsound.onebusaway.org/api/where/routes-for-location.json" as a reliable server.
-- You can rename "config.js.example" to "config.js".
 
 2) Extend the "RoutesForLocationResp" interface, found in "routeFinder.ts":
 - "foundRoutes" provides a list of Route objects upon a successful call to the server API

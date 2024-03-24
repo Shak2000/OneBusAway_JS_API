@@ -11,7 +11,7 @@ class RouteResponseFinder implements RoutesForLocationResp {
     }
 
     doError(err: string): void {
-        console.log("Hello" + err);
+        console.log(err);
     }
 }
 

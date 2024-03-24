@@ -15,6 +15,7 @@ class RouteResponseFinder implements RoutesForLocationResp {
     }
 }
 
+// Unit test for the route finder
 describe("route_finder_test", function() {
     const routeResponseFinder = new RouteResponseFinder();
 
@@ -23,6 +24,8 @@ describe("route_finder_test", function() {
     });
 });
 
+
+// Unit test for the route type
 describe("route_test", function() {
     const route_json = {
         id: '40_100479',
